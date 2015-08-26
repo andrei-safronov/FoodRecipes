@@ -45,6 +45,6 @@ public final class PrefsUtil {
 	public static boolean shouldSaveRecipeImages(Context context) {
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 		String key = context.getString(R.string.prefs_save_images_key);
-		return prefs.getBoolean(key, false);
+		return prefs.getBoolean(key, true);
 	}
 }
