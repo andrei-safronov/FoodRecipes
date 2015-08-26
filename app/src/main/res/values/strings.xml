@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+
+    <!--
+         Used in Action Bar, and in AndroidManifest to tell the device the name of this app.
+         It's to keep this short, so your launcher icon isn't displayed with "The greatest Wea"
+         or something similar.
+    -->
+    <string name="app_name">Food Recipes</string>
+
+    <!--
+         By convention, "action" denotes that this String will be used as the label for an Action,
+         typically from the action bar.  The ActionBar is limited real estate, so shorter is better.
+    -->
+
+    <string name="content_authority" translatable="false">com.example.android.foodrecipes.app</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_favourites">Favourite recipes</string>
+    <string name="action_default_recipes">Show default recipes</string>
+    <string name="action_share">Share</string>
+
+    <string name="title_activity_favorite_recipes">Favorite Recipes</string>
+    <string name="title_activity_detail">Details</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Label for storing default recipe query that is shown on startup -->
+    <string name="pref_default_recipe_query_label">Your favourite ingredients</string>
+
+    <!-- Default recipe query that is shown on the first run (or before user types something) -->
+    <string name="pref_recipe_query_default" translatable="false">Chicken,Mayo,Tomato,Jalapeno</string>
+
+
+	<string name="prefs_category_storage" translatable="false">Favorite recipes storage options</string>
+	<string name="prefs_save_images_key" translatable="false">save_recipe_images</string>
+	<string name="prefs_save_images_summary" translatable="false">Your favorite recipe images will be available when you are offline, however extra space will be taken for storage</string>
+	<string name="prefs_save_images_title" translatable="false">Save images for favorite recipes</string>
+
+
+    <string name="recipe_query_placeholder_text">What ingredients do you have?</string>
+
+    <string name="text_loading_best_recipes">Loading best recipes for you</string>
+    <string name="text_please_wait">Please wait</string>
+    <string name="text_saving_in_favorites">Saving recipe in favorites</string>
+    <string name="text_removing_from_favorites">Removing recipe from favorites</string>
+
+
+    <string name="recipe_share_text">Try <xliff:g id="title">%1$s</xliff:g>! Find more details at <xliff:g id="url">%2$s</xliff:g>!</string>
+
+	<string name="recipe_loading_error_text">Cannot load recipes!</string>
+	<string name="connection_problems">Please check internet connection!</string>
+
+    <string name="recipe_details_save_in_favourites">Save in favorites</string>
+    <string name="recipe_details_remove_from_favorites">Remove from favorites</string>
+    <string name="recipe_details_show_in_browser">Open in browser</string>
+
+    <string name="no_recipes_found">No recipes found</string>
+
+    <string name="recipe_saved_in_favorites">Recipe saved in favourites</string>
+    <string name="recipe_removed_from_favorites">Recipe removed from favourites</string>
+
+</resources>

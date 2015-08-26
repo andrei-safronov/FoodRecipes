@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.android.foodrecipes.app"
+		  xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<!-- Main Activity has "adjustPan" because in this case the keyboard doesn't affect the sizes of other components -->
+	<application
+		android:name="com.example.android.foodrecipes.app.AppController"
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name=".RecipeSearchActivity"
+			android:label="@string/app_name"
+			android:theme="@style/RecipeTheme"
+			android:windowSoftInputMode="adjustPan"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".FavoriteRecipesActivity"
+			android:label="@string/title_activity_favorite_recipes"
+			android:windowSoftInputMode="adjustPan"
+			android:screenOrientation="portrait">
+		</activity>
+
+		<activity
+			android:name=".RecipeDetailsActivity"
+			android:label="@string/title_activity_detail"
+			android:screenOrientation="portrait">
+		</activity>
+
+		<activity
+			android:name=".SettingsActivity"
+			android:label="@string/title_activity_settings"
+			android:theme="@style/SettingsTheme"
+			android:screenOrientation="portrait">
+		</activity>
+
+		<provider
+			android:name=".data.local.RecipeContentProvider"
+			android:authorities="@string/content_authority"
+			android:exported="false"
+			android:syncable="true"/>
+
+	</application>
+
+</manifest>

@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:baselineAligned="false"
+			  android:divider="?android:attr/dividerHorizontal"
+			  android:orientation="horizontal"
+			  tools:context="com.example.android.foodrecipes.app.RecipeSearchActivity">
+
+	<FrameLayout
+		android:id="@+id/fragment_recipes"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="0.4">
+	</FrameLayout>
+
+	<FrameLayout
+		android:id="@+id/recipe_detail_container"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="0.6"/>
+
+</LinearLayout>

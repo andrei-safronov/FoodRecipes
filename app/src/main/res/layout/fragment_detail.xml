@@ -1,0 +1,119 @@
+<!-- Master layout. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical">
+
+	<ScrollView
+		android:id="@+id/recipe_details_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:gravity="center_horizontal"
+			android:orientation="vertical"
+			android:padding="16dp">
+
+			<TextView
+				android:id="@+id/detail_recipe_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textAppearance="?android:textAppearanceLarge"
+				android:textColor="@color/black"
+				android:textSize="24sp"/>
+
+			<RatingBar
+				android:id="@+id/detail_recipe_rating"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:progressDrawable="@drawable/rating_bar_light_orange"
+				android:isIndicator="true"
+				android:numStars="5"
+				android:stepSize="0.5"/>
+
+
+			<com.example.android.foodrecipes.app.utils.SquareImageView
+				android:id="@+id/detail_recipe_picture"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"/>
+
+			<TextView
+				android:id="@+id/detail_recipe_ingredients"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/details_recipes_ingredients_margin_top_bottom"
+				android:layout_marginTop="@dimen/details_recipes_ingredients_margin_top_bottom"
+				android:textColor="@color/black"
+				android:textSize="18sp"/>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_gravity="bottom">
+
+				<Button
+					android:id="@+id/detail_recipe_favourites_action"
+					android:textColor="@color/white"
+					android:gravity="center"
+					android:textSize="18sp"
+					android:layout_width="0dp"
+					android:layout_weight="0.5"
+					android:layout_height="wrap_content"
+					android:background="@color/orange_light"
+					android:layout_margin="@dimen/favorite_buttons_margin"/>
+
+				<Button
+					android:id="@+id/detail_recipe_source"
+					android:text="@string/recipe_details_show_in_browser"
+					android:textColor="@color/white"
+					android:gravity="center"
+					android:textSize="18sp"
+					android:layout_width="0dp"
+					android:layout_weight="0.5"
+					android:layout_height="wrap_content"
+					android:background="@color/orange_light"
+					android:layout_margin="@dimen/favorite_buttons_margin"/>
+
+			</LinearLayout>
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:id="@+id/offline_items"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:visibility="gone">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/recipe_loading_error_text"
+			android:textAppearance="?android:textAppearanceLarge"
+			android:textColor="@color/black"
+			android:textSize="20sp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/connection_problems"
+			android:textAppearance="?android:textAppearanceLarge"
+			android:textColor="@color/black"
+			android:textSize="20sp"/>
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_alert_error"/>
+
+	</LinearLayout>
+
+</LinearLayout>
